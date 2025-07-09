@@ -45,7 +45,7 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /app
 
 # Copy the project files and restore dependencies
-COPY *.csproj ./
+COPY $PROJECT_NAME/*.csproj ./
 RUN dotnet restore
 
 # Copy the rest of the application code
